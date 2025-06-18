@@ -1,0 +1,40 @@
+## Interface: 50500
+## Title: Sleepo Manager
+## RequiredDeps: WeakAuras
+## SavedVariables: SleepoDB
+## Version: 1.0.0
+
+# Libs
+libraries.xml
+
+# Bootstrap
+bootstrap.lua
+
+# Utilities
+Utilities/Helpers.lua
+
+# Data
+Data/Data.lua
+Data/Constants.lua
+Data/DefaultSettings.lua
+Data/Localizations/chat.lua
+
+# Classes
+Classes/Events.lua
+Classes/DB.lua
+Classes/Media.lua
+Classes/Version.lua
+Classes/Settings.lua
+Classes/Player.lua
+Classes/User.lua
+Classes/Commands.lua
+
+# Interfaces
+Interface/AceGUIWidget-LibScrollingTable.lua
+Interface/Interface.lua
+Interface/Locale.lua
+Interface/Settings/Overview.lua
+Interface/Settings/Welcome.lua
+
+# Core files
+API\API.xml
