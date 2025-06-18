@@ -57,7 +57,8 @@
     "SetDesaturation",
     "CLOSE",
     "ACCEPT",
-    "FONT_COLOR_CODE_CLOSE"
+    "FONT_COLOR_CODE_CLOSE",
+    "VMRT"
   ],
   "Lua.diagnostics.disable": [
     "empty-block",

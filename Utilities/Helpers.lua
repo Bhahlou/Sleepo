@@ -220,7 +220,7 @@ end
 ---@vararg string
 ---@return nil
 function SP:message(...)
-    print("|TInterface/TARGETINGFRAME/UI-RaidTargetingIcon_3:12|t|cff8aecff Gargul : |r" .. table.concat({...}, " "));
+    print("|TInterface/TARGETINGFRAME/UI-RaidTargetingIcon_3:12|t|cff8aecff Sleepo : |r" .. table.concat({...}, " "));
 end
 
 --- LUA supports tostring, tonumber etc but no toboolean, let's fix that!
@@ -441,4 +441,46 @@ function SP:debug(...)
     end
 
     SP:coloredMessage("F7922E", ...);
+end
+
+SP.Timers = {};
+---@param seconds number
+---@param identifier string
+---@param func function
+---@param cancel boolean Cancel any running existing timer with using the same identifier
+---@return table
+function SP:after(seconds, identifier, func, cancel)
+    identifier = identifier or GetTime() .. SP:uuid();
+    SP:debug("Schedule " .. identifier);
+
+    cancel = cancel ~= false;
+    SP:cancelTimer(identifier);
+
+    SP.Timers[identifier] = SP.Ace:ScheduleTimer(function()
+        SP:debug("Run once " .. identifier);
+
+        func();
+    end, seconds);
+    return SP.Timers[identifier];
+end
+
+---@param identifier string
+function SP:cancelTimer(identifier)
+    if (not SP.Timers[identifier]) then
+        return;
+    end
+
+    SP:debug("Cancelling " .. identifier);
+    SP.Ace:CancelTimer(SP.Timers[identifier]);
+end
+
+--- Check whether the string is a JSON object
+---@param text string
+---@return boolean
+function SP:isJson(text)
+    if string.sub(text, 1, 1) == "{" and string.sub(text, -1, -1) == "}" then
+        return true
+    else
+        return false
+    end
 end

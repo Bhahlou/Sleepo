@@ -35,6 +35,7 @@ Interface/Interface.lua
 Interface/Locale.lua
 Interface/Settings/Overview.lua
 Interface/Settings/Welcome.lua
+Interface/MRT/MRTNoteImporter.lua
 
 # Core files
 API\API.xml
