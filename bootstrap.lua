@@ -22,6 +22,7 @@ SP.initialized = false;
 SP.firstBoot = false;
 SP.version = C_AddOns.GetAddOnMetadata(SP.name, "Version")
 SP.loadedOn = 32503680000
+SP.MRTLoaded = false
 
 function SP:bootstrap(_, _, addOnName)
 
@@ -47,6 +48,12 @@ function SP:bootstrap(_, _, addOnName)
 
     -- Mark the add-on as fully loaded
     SP.loadedOn = GetServerTime()
+
+    -- Initialize dependencies
+    SP:after(1, nil, function()
+        -- Check if MRT is loaded (for further MRT notes import)
+        self.MRTLoaded = C_AddOns.IsAddOnLoaded("MRT")
+    end)
 end
 
 function SP:initialize()

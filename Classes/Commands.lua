@@ -7,7 +7,8 @@ local Settings = SP.Settings
 ---@field dispatch fun(self: Commands, string: string)
 SP.Commands = SP.Commands or {
     CommandDescriptions = {
-        settings = "Open the settings menu"
+        settings = "Open the settings menu",
+        mrt = "Open the MRT Note Importer"
     },
     Dictionnary = {
         -- Open the locale selector
@@ -18,6 +19,11 @@ SP.Commands = SP.Commands or {
         -- Open the settings menu
         settings = function(...)
             Settings:draw()
+        end,
+
+        -- Open the MRT Note Importer
+        mrt = function()
+            SP.Interface.MRTNoteImporter:draw()
         end
     }
 }
