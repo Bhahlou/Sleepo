@@ -15,8 +15,7 @@ SP.Interface.Settings.Overview = {
     activeSection = nil,
     previousSection = nil,
     defaultSection = "Welcome",
-    Sections = {{"|c00A79EFFWELCOME|r", "Welcome"}, {"General", "General"}, {"Minimap Icon", "MinimapButton"},
-                {"SoftRes", "SoftRes"}},
+    Sections = {{"|c00A79EFFWELCOME|r", "Welcome"}, {"General", "General"}, {"Minimap Icon", "MinimapButton"}},
     SectionIndexes = nil
 }
 
@@ -139,66 +138,6 @@ function Overview:draw(section, onCloseCallback)
     HorizontalSpacer:SetFullWidth(true);
     HorizontalSpacer:SetHeight(20);
     SecondColumn:AddChild(HorizontalSpacer);
-
-    -- local ChangelogButton = AceGUI:Create("Button");
-    -- ChangelogButton:SetText("Changelog");
-    -- ChangelogButton:SetCallback("OnClick", function()
-    --     SP.Interface.Changelog:draw();
-    --     self:close(function()
-    --         self:draw(self.activeSection);
-    --     end);
-    -- end);
-    -- ChangelogButton:SetWidth(120);
-    -- SecondColumn:AddChild(ChangelogButton);
-
-    -- local ResetUIButton = AceGUI:Create("Button");
-    -- ResetUIButton:SetText(L["Reset Gargul UI"]);
-    -- ResetUIButton:SetCallback("OnClick", function()
-    --     SP.Interface.Dialogs.PopupDialog:open{
-    --         question = L["Are you sure you want to reset all of Gargul's window sizes, positions and scale? This can't be undone!"],
-    --         OnYes = function()
-    --             SP.Commands:call("resetui");
-    --         end
-    --     };
-    -- end);
-    -- ResetUIButton:SetWidth(136);
-    -- SecondColumn:AddChild(ResetUIButton);
-
-    -- local ResetSettingsButton = AceGUI:Create("Button");
-    -- ResetSettingsButton:SetText(L["Reset Settings"]);
-    -- ResetSettingsButton:SetCallback("OnClick", function()
-    --     SP.Interface.Dialogs.PopupDialog:open{
-    --         question = L["Are you sure you want to reset all of Gargul's settings? This can't be undone!"],
-    --         OnYes = function()
-    --             SP.Commands:call("resetsettings");
-    --         end
-    --     };
-    -- end);
-    -- ResetSettingsButton:SetWidth(136);
-    -- SecondColumn:AddChild(ResetSettingsButton);
-
-    -- local PatreonButton = SP.UI:createFrame("Button", "PatreonButton" .. SP:uuid(), Window.frame,
-    --     "UIPanelButtonTemplate");
-    -- PatreonButton:Show();
-    -- PatreonButton:SetSize(170, 43);
-    -- PatreonButton:SetPoint("BOTTOMLEFT", Window.frame, "BOTTOMLEFT", 25, 16);
-
-    -- local HighlightTexture = PatreonButton:CreateTexture();
-    -- HighlightTexture:SetTexture("Interface\\AddOns\\Gargul\\Assets\\Buttons\\patreon");
-    -- HighlightTexture:SetPoint("CENTER", PatreonButton, "CENTER", 0, 0);
-    -- HighlightTexture:SetSize(170, 43);
-
-    -- PatreonButton:SetNormalTexture("Interface\\AddOns\\Gargul\\Assets\\Buttons\\patreon");
-    -- PatreonButton:SetHighlightTexture(HighlightTexture);
-
-    -- PatreonButton:SetScript("OnClick", function(_, button)
-    --     if (button == 'LeftButton') then
-    --         SP.Interface.Dialogs.HyperlinkDialog:open{
-    --             description = "Thanks for considering becoming a Patron of Gargul, your support helps tremendously!",
-    --             hyperlink = "patreon.com/gargul"
-    --         };
-    --     end
-    -- end);
 
     self:showSection(section);
 end
