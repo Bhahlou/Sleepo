@@ -65,7 +65,8 @@
     "empty-block",
     "undefined-field",
     "inject-field",
-    "invisible"
+    "invisible",
+    "param-type-mismatch"
   ],
   "Lua.type.weakUnionCheck": true
 }
