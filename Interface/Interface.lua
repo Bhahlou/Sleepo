@@ -532,7 +532,6 @@ function Interface:restorePosition(Item, identifier)
 
     Item:ClearAllPoints();
     Item:SetPoint(self:getPosition(identifier));
-
     return true;
 end
 
@@ -801,7 +800,7 @@ end
 --- Get an element's stored position (defaults to center of screen)
 ---
 ---@param identifier string|nil
----@param default table
+---@param default? table
 ---@return table
 function Interface:getPosition(identifier, default)
     identifier = string.format("UI.%s.Position", identifier);

@@ -1,7 +1,7 @@
-Bhahlou = Bhahlou or {}
-local UnitAffectingCombat = UnitAffectingCombat
+---@type SP
+local _, SP = ...
 
-Bhahlou.SetButtonTemplate = function(aura_env, buttonName, type, context, context2)
+function SP:SetButtonTemplate(aura_env, buttonName, type, context, context2)
     if WeakAuras.IsOptionsOpen() then
         return
     end

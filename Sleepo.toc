@@ -11,7 +11,15 @@ libraries.xml
 bootstrap.lua
 
 # Utilities
-Utilities/Helpers.lua
+Utilities/ButtonHelpers.lua
+Utilities/ChatHelpers.lua
+Utilities/ItemHelpers.lua
+Utilities/MiscHelpers.lua
+Utilities/NumberHelpers.lua
+Utilities/PlayerHelpers.lua
+Utilities/StringHelpers.lua
+Utilities/TableHelpers.lua
+Utilities/TimerHelpers.lua
 
 # Data
 Data/Data.lua
@@ -36,6 +44,3 @@ Interface/Locale.lua
 Interface/Settings/Overview.lua
 Interface/Settings/Welcome.lua
 Interface/MRT/MRTNoteImporter.lua
-
-# Core files
-API\API.xml
