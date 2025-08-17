@@ -2,7 +2,7 @@
 ## Title: Sleepo Manager
 ## RequiredDeps: WeakAuras
 ## SavedVariables: SleepoDB
-## Version: 1.0.0
+## Version: 1.1.0
 
 # Libs
 libraries.xml
@@ -13,6 +13,7 @@ bootstrap.lua
 # Utilities
 Utilities/ButtonHelpers.lua
 Utilities/ChatHelpers.lua
+Utilities/InterfaceHelpers.lua
 Utilities/ItemHelpers.lua
 Utilities/MiscHelpers.lua
 Utilities/NumberHelpers.lua
@@ -43,4 +44,4 @@ Interface/Interface.lua
 Interface/Locale.lua
 Interface/Settings/Overview.lua
 Interface/Settings/Welcome.lua
-Interface/MRT/MRTNoteImporter.lua
+Interface/Raid/RaidSetupImporter.lua

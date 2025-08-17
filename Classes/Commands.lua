@@ -8,7 +8,7 @@ local Settings = SP.Settings
 SP.Commands = SP.Commands or {
     CommandDescriptions = {
         settings = "Open the settings menu",
-        mrt = "Open the MRT Note Importer"
+        mrt = "Open the Raid Setup Importer"
     },
     Dictionnary = {
         -- Open the locale selector
@@ -21,9 +21,9 @@ SP.Commands = SP.Commands or {
             Settings:draw()
         end,
 
-        -- Open the MRT Note Importer
-        mrt = function()
-            SP.Interface.MRTNoteImporter:draw()
+        -- Open the Raid Setup Importer
+        import = function()
+            SP.Interface.RaidSetupImporter:Draw()
         end
     }
 }

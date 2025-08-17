@@ -35,6 +35,7 @@ local Version = SP.Version
 --- Initialize version
 ---@return nil
 function Version:initialize()
+    print(self.initialized)
     if self.initialized then
         return;
     end
@@ -45,6 +46,7 @@ function Version:initialize()
     end
 
     -- First time this version is loaded
+    print(SP.DB.LoadDetails[self.current])
     if not SP.DB.LoadDetails[self.current] then
         self.firstBoot = true
 
