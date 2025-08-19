@@ -2,7 +2,7 @@
 ## Title: Sleepo Manager
 ## RequiredDeps: WeakAuras
 ## SavedVariables: SleepoDB
-## Version: 1.1.2
+## Version: 1.1.3
 
 # Libs
 libraries.xml
