@@ -138,9 +138,9 @@ function RaidSetupImporter:ParseJSON(text, frame)
         end
     end
 
-    WeakAuras.ScanEvents("WA_SLEEPO_SAVE_SB_ROTATION", rotationTable)
-    DevTools_Dump(rotationTable)
-    SP:message("Stormlash and Banner rotations event sent")
+    Sleepo.DB:set("StormlashBannerRotation", rotationTable)
+    WeakAuras.ScanEvents("WA_SLEEPO_NEW_SB_ROTATION")
+    SP:message("Stormlash and Banner rotation saved")
 end
 
 --- Close the import window
