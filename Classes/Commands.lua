@@ -42,7 +42,7 @@ function Commands:dispatch(commandString)
         argumentString = strsub(commandString, strlen(command) + 2)
     end
 
-    -- If nothing after "/sleepo" or "/sp" then open localization or settings window
+    -- If nothing after "/sleepo" then open localization or settings window
     if (not commandString or #commandString < 1) then
         command = SP.Settings:get("chatLocale") and "settings" or "locale";
     end

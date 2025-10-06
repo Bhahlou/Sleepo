@@ -94,10 +94,10 @@ function SP:initialize()
     end);
 
     if self.Settings:get("welcomeMessage") then
-        print(
-            (L["|c00%sSleepo Manager v%s by Bhahlou@Auberdine. Type |c00%s/sleepo or |c00%s/sp to get started!"]):format(
-                self.Data.Constants.addonHexColor, self.version, self.Data.Constants.addonHexColor,
-                self.Data.Constants.addonHexColor))
+        print((L["|c00%sSleepo Manager v%s by Bhahlou@Auberdine. Type |c00%s/sleepo to get started!"]):format(self.Data
+                                                                                                                  .Constants
+                                                                                                                  .addonHexColor,
+            self.version, self.Data.Constants.addonHexColor, self.Data.Constants.addonHexColor))
     end
 
     self.Media:initialize();

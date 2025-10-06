@@ -92,7 +92,7 @@ function Locale:build()
 
     ---@type FontString
     local Note = Interface:createFontString(Window,
-        (L["Note: you can change the locale at any time in the settings or via |c00%s/sp locale"]):format(
+        (L["Note: you can change the locale at any time in the settings or via |c00%s/sleepo locale"]):format(
             SP.Data.Constants.addonHexColor));
     Note:SetPoint("TOP", Locales, "BOTTOM", 0, -6);
     Note:SetPoint("LEFT", Window, "LEFT", 20, -30);
